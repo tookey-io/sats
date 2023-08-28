@@ -1,22 +1,20 @@
 {
-  "name": "typescript-library-template",
-  "version": "1.0.0",
-  "description": "Starter template for TypeScript libraries",
+  "name": "@tookey-io/sats",
+  "version": "0.0.1",
+  "description": "JS library to operate with Bitcoin Ordinals and Sats",
   "main": "lib/main/index.js",
   "typings": "lib/main/index.d.ts",
   "module": "lib/module/index.js",
-  "repository": "https://github.com/amelspahic/typescript-library-template.git",
-  "author": "Amel Spahic",
+  "repository": "https://github.com/tookey-io/sats.git",
+  "author": "Aler Denisov",
   "license": "MIT",
   "keywords": [
-    "typescript",
-    "library",
-    "template",
-    "starter",
-    "starter-template",
-    "starter-template-typescript",
-    "starter-template-typescript-library",
-    "tests"
+    "bitcoin",
+    "sats",
+    "satoshis",
+    "ordinal",
+    "satoshi",
+    "inscription"
   ],
   "scripts": {
     "build": "run-p build:*",
