@@ -1,10 +1,6 @@
 name: Build and Publish
 
 on:
-  push:
-    branches:
-      - main
-      - feature/cicd
   release:
     types:
       - created
