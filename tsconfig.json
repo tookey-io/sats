@@ -39,7 +39,10 @@
 
     "lib": ["es2020"],
     "types": ["node"],
-    "typeRoots": ["node_modules/@types", "src/types"]
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "paths": {
+      "@tookey-io/sats": ["./src/index.ts"],
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules/**"],

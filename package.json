@@ -18,8 +18,8 @@
   ],
   "scripts": {
     "build": "run-p build:*",
-    "build:main": "tsc -p tsconfig.json",
-    "build:module": "tsc -p tsconfig.module.json",
+    "build:main": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json && tsc-alias -p tsconfig.module.json",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:lint": "eslint src --ext .ts --fix",
@@ -27,7 +27,7 @@
     "test:lint": "eslint src --ext .ts",
     "test:prettier": "prettier \"src/**/*.ts\" --list-different",
     "test:unit": "nyc --silent ava",
-    "watch:build": "tsc -p tsconfig.json -w",
+    "watch:build": "concurrently --kill-others \"tsc -p tsconfig.json -w\" \"tsc -p tsconfig.module.json -w\"",
     "watch:test": "nyc --silent ava --watch",
     "cov": "run-s build test:unit cov:html cov:lcov && open-cli coverage/index.html",
     "cov:html": "nyc report --reporter=html",
@@ -46,6 +46,7 @@
     "@typescript-eslint/parser": "^5.62.0",
     "ava": "^5.3.1",
     "codecov": "^3.8.3",
+    "concurrently": "^8.2.1",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -57,6 +58,7 @@
     "open-cli": "^7.2.0",
     "prettier": "^2.8.8",
     "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.7",
     "typedoc": "^0.25.0",
     "typescript": "^5.2.2"
   },
@@ -83,7 +85,9 @@
     ]
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "tabWidth": 4,
+    "useTabs": false
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
