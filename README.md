@@ -18,6 +18,29 @@ package.json:
 - Generates HTML documentation using [TypeDoc](https://typedoc.org).
 - Uses [Husky](https://github.com/typicode/husky) Git hooks and [Lint-staged](https://github.com/okonet/lint-staged) pre-commit hooks.
 
+## Usage
+
+1. Install as dependency to your NodeJS or Browser project: `npm install --save @tookey-io/sats` or `yarn add @tookey-io/sats`
+2. Use :D
+
+```typescript
+
+import { Sat } from "@tookey-io/sats";
+
+const sat = Sat.fromName("alerdenisov");
+
+// 1892488848343776
+console.log("alerdenisov sat #" + sat.n);
+
+// 717982
+console.log("alerdenisov sat mine height: " + sat.decimal.height.n);
+
+// 98343776
+console.log("alerdenisov sat mine offset: " + sat.decimal.offset);
+```
+
+For more examples navigate to [tests](/tree/main/src/tests) or documentation (not yet publish, but available with `npm run doc`)
+
 ## Contribution
 
 Clone the repository:
