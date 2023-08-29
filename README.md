@@ -1,6 +1,14 @@
-# typescript-library-template
+# @tookey-io/sats
 
-A starter template for TypeScript libraries. Use this repository as a starting point for your own TypeScript library. This template includes the following features:
+JavaScript library to operate with Sats with respect to [Ordinals Handbook](https://docs.ordinals.com/).
+Created on pure TypeScript without ANY dependency — feel safe! 
+
+```json
+package.json:
+{
+  "dependencies": {},
+}
+```
 
 - Compiles TypeScript code using both the `tsconfig.json` and `tsconfig.module.json` files.
 - Formats TypeScript code using [Prettier](https://prettier.io).
@@ -10,12 +18,11 @@ A starter template for TypeScript libraries. Use this repository as a starting p
 - Generates HTML documentation using [TypeDoc](https://typedoc.org).
 - Uses [Husky](https://github.com/typicode/husky) Git hooks and [Lint-staged](https://github.com/okonet/lint-staged) pre-commit hooks.
 
-## Installation
+## Contribution
 
 Clone the repository:
-
 ```bash
-git clone https://github.com/amelspahic/typescript-library-template.git
+git clone https://github.com/tookey-io/sats.git
 ```
 
 Install the dependencies:
@@ -90,9 +97,12 @@ The template uses [Husky](https://github.com/typicode/husky) and [Lint-staged](h
 
 For more information on available scripts, see the `Scripts` section of the `package.json` file.
 
-## Contributing
+## TODO
 
-To contribute to the project, please follow the guidelines for submitting issues and pull requests.
+[*] Representation convertion
+[ ] Rarity assesment
+[ ] Exotic sats
+[ ] Match the ranges
 
 ## License
 
@@ -100,4 +110,4 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements
 
-This project uses Prettier, ESLint, AVA, NYC, Husky, Lint-staged, TypeDoc.
+This project uses Prettier, ESLint, AVA, NYC, Husky, Lint-staged, TypeDoc. And highly inspired by [ord](https://github.com/ordinals/ord) implementation on Rust 
