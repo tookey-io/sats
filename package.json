@@ -39,6 +39,7 @@
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --json lib/docs/typedoc.json",
     "prepare": "husky install"
   },
+  "dependencies": {},
   "devDependencies": {
     "@ava/typescript": "^3.0.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
