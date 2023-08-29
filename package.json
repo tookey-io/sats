@@ -8,6 +8,7 @@
   "repository": "https://github.com/tookey-io/sats.git",
   "author": "Aler Denisov",
   "license": "MIT",
+  "private": false,
   "keywords": [
     "bitcoin",
     "sats",
